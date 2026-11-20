@@ -7,14 +7,14 @@ The four Flygon themes in one place, so every app inherits them instead of copyi
 | `flygon` | Flygon LC | Pixel headlines, warm paper, dark green ink, brick red action |
 | `othello` | Othello | Harbor blue, warm Hearth neutrals, editorial type |
 | `system` | System Boring | GeneaRoute's paper and forest. Quiet and legible |
-| `night` | Night | Charcoal dark mode with Android-sized controls |
+| `night` | Night | Charcoal dark mode with large touch targets |
 
 ## Install
 
-Installed straight from a GitHub tag (no npm registry needed):
+Install the tarball attached to a GitHub release. No npm login, and builds need no git access:
 
 ```sh
-npm install github:aribradshaw/flygon-styles#v1.0.1
+npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.2/flygon-styles-1.0.2.tgz
 ```
 
 ## Use
@@ -50,7 +50,7 @@ npm run build   # regenerates dist/
 npm test        # four themes, same color roles, dist up to date, 4.5:1 text contrast
 ```
 
-Commit `dist/` with the change, tag the release, and bump the tag in each app.
+Commit `dist/` with the change, tag the release, attach `npm pack` output with `gh release upload`, and bump the URL in each app.
 
 ## Versioning
 
