@@ -1,0 +1,86 @@
+/* @flygon/styles. Generated from src/catalog.js by npm run build. Do not edit. */
+/* Flygon LC */
+[data-theme="flygon"],
+.style-flygon {
+  --style-paper: #F4F6EE;
+  --style-surface: #FFFFFF;
+  --style-ink: #1D2A1F;
+  --style-muted: #4A5A4C;
+  --style-accent: #A8524C;
+  --style-onAccent: #FFFFFF;
+  --style-line: #D3DCC9;
+  --style-radius: 4px;
+  --style-heading-font: "Press Start 2P", monospace;
+  --style-body-font: system-ui, sans-serif;
+  color-scheme: light;
+}
+
+/* Othello */
+[data-theme="othello"],
+.style-othello {
+  --style-paper: #F3F7FA;
+  --style-surface: #E5EEF4;
+  --style-ink: #293E50;
+  --style-muted: #365874;
+  --style-accent: #365874;
+  --style-onAccent: #FFFFFF;
+  --style-line: #A7C4D8;
+  --othello-gray-50: #FAF9F7;
+  --othello-gray-100: #F2F1EE;
+  --othello-gray-200: #E4E3DE;
+  --othello-gray-300: #CECEC7;
+  --othello-gray-400: #A9AAA3;
+  --othello-gray-500: #858780;
+  --othello-gray-600: #666962;
+  --othello-gray-700: #4F534D;
+  --othello-gray-800: #393E39;
+  --othello-gray-900: #272D29;
+  --othello-gray-950: #181E1B;
+  --othello-blue-50: #F3F7FA;
+  --othello-blue-100: #E5EEF4;
+  --othello-blue-200: #CCDDE9;
+  --othello-blue-300: #A7C4D8;
+  --othello-blue-400: #7FA5C1;
+  --othello-blue-500: #5D89AB;
+  --othello-blue-600: #456E90;
+  --othello-blue-700: #365874;
+  --othello-blue-800: #2E495F;
+  --othello-blue-900: #293E50;
+  --othello-blue-950: #1A2936;
+  --style-radius: 24px;
+  --style-heading-font: "Style Source Sans", sans-serif;
+  --style-body-font: "Style Source Sans", sans-serif;
+  color-scheme: light;
+}
+
+/* System Boring */
+[data-theme="system"],
+.style-system {
+  --style-paper: #F7F7F4;
+  --style-surface: #FFFFFF;
+  --style-ink: #181B19;
+  --style-muted: #606662;
+  --style-accent: #155747;
+  --style-onAccent: #FFFFFF;
+  --style-line: #D9DDDA;
+  --style-radius: 3px;
+  --style-heading-font: "Instrument Serif", Georgia, serif;
+  --style-body-font: "Instrument Sans", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+/* Night */
+[data-theme="night"],
+.style-night {
+  --style-paper: #151719;
+  --style-surface: #222529;
+  --style-ink: #F1F3F4;
+  --style-muted: #BBC1C7;
+  --style-accent: #B7D9AE;
+  --style-onAccent: #172414;
+  --style-line: #42474D;
+  --style-radius: 16px;
+  --style-heading-font: system-ui, sans-serif;
+  --style-body-font: system-ui, sans-serif;
+  color-scheme: dark;
+}
