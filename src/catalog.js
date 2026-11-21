@@ -4,6 +4,12 @@ export const othelloPalette = {
   gray: ['#FAF9F7', '#F2F1EE', '#E4E3DE', '#CECEC7', '#A9AAA3', '#858780', '#666962', '#4F534D', '#393E39', '#272D29', '#181E1B'],
   blue: ['#F3F7FA', '#E5EEF4', '#CCDDE9', '#A7C4D8', '#7FA5C1', '#5D89AB', '#456E90', '#365874', '#2E495F', '#293E50', '#1A2936'],
 };
+// Flygon brand colors: the logo and product chrome (Flow, the admin header),
+// independent of which theme a page uses. Emitted as --flygon-* on :root.
+export const flygonBrand = {
+  green: '#7CB980', dark: '#324B34', light: '#D1ECB0', tint: '#EEF7E6',
+  brick: '#A8524C', brickHover: '#974A44',
+};
 export const shadeSteps = [50,100,200,300,400,500,600,700,800,900,950];
 export const styleRules = [
   ['No eyebrows', 'Start with the heading. No tiny uppercase category labels floating above it. Useful status labels belong beside the thing they describe.'],

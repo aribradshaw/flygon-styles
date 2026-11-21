@@ -14,7 +14,7 @@ The four Flygon themes in one place, so every app inherits them instead of copyi
 Install the tarball attached to a GitHub release. No npm login, and builds need no git access:
 
 ```sh
-npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.3/flygon-styles-1.0.3.tgz
+npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.4/flygon-styles-1.0.4.tgz
 ```
 
 ## Use
@@ -31,7 +31,9 @@ import '@flygon/styles/themes.css';
 
 Each theme sets `--style-paper`, `--style-surface`, `--style-ink`, `--style-muted`, `--style-accent`, `--style-on-accent`, `--style-line`, `--style-radius`, `--style-heading-font`, `--style-body-font` and `color-scheme`. Othello also sets its full ramps (`--othello-gray-50` … `--othello-blue-950`).
 
-JavaScript catalog (names, colors, principles, the eight style rules):
+Flygon brand colors (logo and product chrome) are always on `:root`: `--flygon-green`, `--flygon-dark`, `--flygon-light`, `--flygon-tint`, `--flygon-brick`, `--flygon-brick-hover`.
+
+JavaScript catalog (names, colors, principles, the eight style rules, `flygonBrand`):
 
 ```js
 import { styles, styleRules, othelloPalette, cssForStyle } from '@flygon/styles';

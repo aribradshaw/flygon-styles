@@ -1,4 +1,14 @@
 /* @flygon/styles. Generated from src/catalog.js by npm run build. Do not edit. */
+/* Flygon brand colors, available on every page */
+:root {
+  --flygon-green: #7CB980;
+  --flygon-dark: #324B34;
+  --flygon-light: #D1ECB0;
+  --flygon-tint: #EEF7E6;
+  --flygon-brick: #A8524C;
+  --flygon-brick-hover: #974A44;
+}
+
 /* Flygon LC */
 [data-theme="flygon"],
 .style-flygon {
