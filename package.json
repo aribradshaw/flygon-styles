@@ -24,6 +24,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test test/*.test.mjs",
-    "bump-consumers": "node scripts/bump-consumers.mjs"
+    "bump-consumers": "node scripts/bump-consumers.mjs",
+    "othello:check": "node scripts/othello.mjs check",
+    "othello:pull": "node scripts/othello.mjs pull"
   }
 }

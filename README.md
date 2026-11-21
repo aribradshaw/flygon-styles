@@ -61,6 +61,12 @@ npm run bump-consumers                # one PR per app, on chore/flygon-styles-<
 
 It finds apps by scanning every repo's `package.json` files for the release URL, rewrites the URL, refreshes the lockfile, and runs the app's `styles:after-bump` script if it has one (for regenerating committed output). Options: `--version X.Y.Z`, `--repo <name>`, `--owner <login>`.
 
+## Where each theme comes from
+
+- **Othello** follows the Othello site. Its ramps are owned by `othello-pet` (`ari-portal/src/lib/othello-palette.ts`), and the theme's colors are shades of those ramps. Don't edit them here: change the site, then `npm run othello:pull -- --from <othello-pet checkout>` (or `othello:check` to see drift).
+- **System Boring** started as GeneaRoute's palette; GeneaRoute now reads its base colors from this package.
+- **Flygon LC** and **Night** are designed here.
+
 ## Versioning
 
 [Bradshaw Versioning](https://github.com/aribradshaw/devlog/blob/main/docs/bradshaw-versioning.md): `YEAR.MONTH.UPDATE`, one-based year from 2026, months relative to the project's start (November 2026 is month `0`). Pin an exact tag.
