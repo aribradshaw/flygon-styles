@@ -52,7 +52,14 @@ npm run build   # regenerates dist/
 npm test        # four themes, same color roles, dist up to date, 4.5:1 text contrast
 ```
 
-Commit `dist/` with the change, tag the release, attach `npm pack` output with `gh release upload`, and bump the URL in each app.
+Commit `dist/` with the change, tag the release, attach `npm pack` output with `gh release upload`, then open bump PRs in every app:
+
+```sh
+npm run bump-consumers -- --dry-run   # list apps on an older version
+npm run bump-consumers                # one PR per app, on chore/flygon-styles-<version>
+```
+
+It finds apps by scanning every repo's `package.json` files for the release URL, rewrites the URL, refreshes the lockfile, and runs the app's `styles:after-bump` script if it has one (for regenerating committed output). Options: `--version X.Y.Z`, `--repo <name>`, `--owner <login>`.
 
 ## Versioning
 
