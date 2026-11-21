@@ -14,7 +14,7 @@ The four Flygon themes in one place, so every app inherits them instead of copyi
 Install the tarball attached to a GitHub release. No npm login, and builds need no git access:
 
 ```sh
-npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.2/flygon-styles-1.0.2.tgz
+npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.3/flygon-styles-1.0.3.tgz
 ```
 
 ## Use
@@ -55,3 +55,7 @@ Commit `dist/` with the change, tag the release, attach `npm pack` output with `
 ## Versioning
 
 [Bradshaw Versioning](https://github.com/aribradshaw/devlog/blob/main/docs/bradshaw-versioning.md): `YEAR.MONTH.UPDATE`, one-based year from 2026, months relative to the project's start (November 2026 is month `0`). Pin an exact tag.
+
+## License
+
+All rights reserved by Flygon LC. Public so Flygon projects can install it, not for reuse. Flygon LC and its affiliated companies may use it; copies of Flygon's open-source software (such as Flow) may use it as shipped in that software. See [LICENSE](LICENSE).

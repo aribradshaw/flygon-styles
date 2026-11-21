@@ -1,21 +1,30 @@
-MIT License
+Copyright (c) 2026 Flygon LC. All rights reserved.
 
-Copyright (c) 2026 Ari Bradshaw
+This repository is public so that Flygon projects can install it. Being
+able to see it does not give you permission to use it.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+What is covered: the Flygon LC, Othello, System Boring and Night themes,
+their names, palettes, typography choices, descriptions, principles and
+style rules, and the generated CSS and token files.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Who may use it:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1. Flygon LC, and any company or project owned or controlled by Ari
+   Bradshaw or Flygon LC, for any purpose.
+2. Anyone running, modifying or redistributing open-source software
+   published by Flygon LC (for example Flygon Flow) may use these styles
+   as they ship inside that software, under that software's license, for
+   that software only.
+
+Everyone else may view this repository but may not copy, modify,
+distribute or use any part of it, in whole or in part, without written
+permission from Flygon LC.
+
+Third-party fonts named here are not included and remain under their own
+licenses (Press Start 2P, Source Sans 3 and Instrument Sans/Serif are
+under the SIL Open Font License 1.1).
+
+Versions 1.0.1 and 1.0.2 were published under the MIT License. This
+notice applies from version 1.0.3.
+
+Contact: https://flygonlc.com

@@ -1,18 +1,26 @@
 {
   "name": "@flygon/styles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The four Flygon themes (Flygon LC, Othello, System Boring, Night) as one catalog, CSS variables and JSON tokens.",
   "type": "module",
-  "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/aribradshaw/flygon-styles.git" },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aribradshaw/flygon-styles.git"
+  },
   "exports": {
     ".": "./src/index.js",
     "./catalog": "./src/catalog.js",
     "./themes.css": "./dist/themes.css",
     "./tokens.json": "./dist/tokens.json"
   },
-  "files": ["src", "dist"],
-  "sideEffects": ["*.css"],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test test/*.test.mjs"
