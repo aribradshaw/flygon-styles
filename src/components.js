@@ -117,7 +117,13 @@ const base = `/* Select: wrap a native <select> in .flygon-select. The chevron i
 }
 .flygon-menu-item[aria-checked="true"]::after { border-color: var(--style-accent); background: var(--style-accent); }
 .flygon-menu-separator { height: 1px; margin: 4px 6px; border: 0; background: var(--style-line); }
-@media (prefers-reduced-motion: reduce) { .flygon-select select { transition: none; } }`;
+/* Menus ease in instead of snapping open. */
+@keyframes flygon-menu-in { from { opacity: 0; transform: translateY(6px) scale(.98); } to { opacity: 1; transform: none; } }
+.flygon-menu { animation: flygon-menu-in 170ms cubic-bezier(.2, .8, .2, 1) both; transform-origin: 50% 100%; }
+.flygon-menu-item { transition: background-color 120ms, color 120ms; }
+.flygon-menu-item[aria-checked]::after { transition: background-color 160ms, border-color 160ms, transform 160ms; }
+.flygon-menu-item[aria-checked="true"]::after { transform: scale(1.1); }
+@media (prefers-reduced-motion: reduce) { .flygon-select select, .flygon-menu, .flygon-menu-item, .flygon-menu-item[aria-checked]::after { transition: none; animation: none; } }`;
 
 // Each theme's own take: pixel-hard Flygon, soft round Othello, flat System Boring, roomy Night.
 const flavors = [

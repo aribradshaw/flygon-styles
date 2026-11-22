@@ -14,7 +14,7 @@ The four Flygon themes in one place, so every app inherits them instead of copyi
 Install the tarball attached to a GitHub release. No npm login, and builds need no git access:
 
 ```sh
-npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.5/flygon-styles-1.0.5.tgz
+npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.6/flygon-styles-1.0.6.tgz
 ```
 
 ## Use
@@ -50,7 +50,7 @@ import '@flygon/styles/components.css';
 </div>
 ```
 
-Flygon LC draws them pixel-hard (2px dark border, offset shadow), Othello soft and round, System Boring flat and compact, Night roomy with 48px+ targets. The menu is unpositioned; place it yourself.
+Flygon LC draws them pixel-hard (2px dark border, offset shadow), Othello soft and round, System Boring flat and compact, Night roomy with 48px+ targets. The menu is unpositioned; place it yourself. It eases in when it appears, and motion turns off under `prefers-reduced-motion`.
 
 JavaScript catalog (names, colors, principles, the eight style rules, `flygonBrand`):
 
