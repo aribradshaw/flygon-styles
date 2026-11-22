@@ -40,3 +40,12 @@ test('components.css is built and gives every theme its own select and menu', as
     assert.ok(css.includes(`.style-${id} .flygon-menu`), id);
   }
 });
+
+test('the custom select shares the select look and opens a themed listbox', async () => {
+  const { componentsCss } = await import('../src/index.js');
+  const css = componentsCss();
+  assert.ok(css.includes('.flygon-select :is(select, .flygon-select-button) {'));
+  assert.ok(css.includes('.flygon-select > .flygon-menu'));
+  assert.ok(css.includes('.flygon-menu-item[aria-selected="true"]'));
+  assert.ok(!/\.flygon-select select[ ,:{]/.test(css), 'every select rule also covers the custom button');
+});

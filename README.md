@@ -14,7 +14,7 @@ The four Flygon themes in one place, so every app inherits them instead of copyi
 Install the tarball attached to a GitHub release. No npm login, and builds need no git access:
 
 ```sh
-npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.6/flygon-styles-1.0.6.tgz
+npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.7/flygon-styles-1.0.7.tgz
 ```
 
 ## Use
@@ -41,6 +41,12 @@ import '@flygon/styles/components.css';
 
 ```html
 <span class="flygon-select"><select>…</select></span>
+
+<!-- Custom list: same look, and the open list is themed too (you add the ARIA combobox behavior) -->
+<span class="flygon-select is-open">
+  <button class="flygon-select-button" role="combobox" aria-expanded="true"><span class="flygon-select-value">Night</span></button>
+  <div class="flygon-menu" role="listbox"><div class="flygon-menu-item" role="option" aria-selected="true">Night</div></div>
+</span>
 
 <div class="flygon-menu" role="menu">
   <p class="flygon-menu-label">Theme</p>

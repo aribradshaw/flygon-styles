@@ -11,7 +11,7 @@
   width: 100%;
   color: var(--style-ink);
 }
-.flygon-select select {
+.flygon-select :is(select, .flygon-select-button) {
   appearance: none;
   -webkit-appearance: none;
   display: block;
@@ -30,9 +30,9 @@
   cursor: pointer;
   transition: background-color 140ms, box-shadow 140ms, transform 140ms;
 }
-.flygon-select select:hover:not(:disabled) { background-color: var(--select-hover); }
-.flygon-select select:focus-visible { outline: 3px solid var(--style-accent); outline-offset: 2px; }
-.flygon-select select:disabled { opacity: .55; cursor: not-allowed; }
+.flygon-select :is(select, .flygon-select-button):hover:not(:disabled) { background-color: var(--select-hover); }
+.flygon-select :is(select, .flygon-select-button):focus-visible { outline: 3px solid var(--style-accent); outline-offset: 2px; }
+.flygon-select :is(select, .flygon-select-button):disabled { opacity: .55; cursor: not-allowed; }
 .flygon-select::after {
   content: "";
   position: absolute;
@@ -102,13 +102,23 @@
 }
 .flygon-menu-item[aria-checked="true"]::after { border-color: var(--style-accent); background: var(--style-accent); }
 .flygon-menu-separator { height: 1px; margin: 4px 6px; border: 0; background: var(--style-line); }
+/* Custom select: a button styled like the select, opening a themed listbox. */
+.flygon-select .flygon-select-button { display: flex; align-items: center; text-align: left; }
+.flygon-select-value { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.flygon-select::after { transition: transform 160ms; }
+.flygon-select.is-open::after { transform: translateY(-30%) rotate(-135deg); }
+.flygon-select > .flygon-menu { position: absolute; top: calc(100% + 6px); left: 0; z-index: 50; width: max(100%, 200px); max-width: min(420px, 92vw); max-height: min(320px, 60vh); overflow-y: auto; overscroll-behavior: contain; transform-origin: 50% 0; }
+.flygon-menu[role="listbox"] .flygon-menu-item { cursor: pointer; }
+.flygon-menu-item.is-active { background: var(--menu-hover); }
+.flygon-menu-item[aria-selected="true"] { font-weight: 650; }
+.flygon-menu-item[aria-selected="true"]::after { content: ""; width: 8px; height: 8px; margin-left: auto; flex-shrink: 0; border-radius: 50%; background: var(--style-accent); }
 /* Menus ease in instead of snapping open. */
 @keyframes flygon-menu-in { from { opacity: 0; transform: translateY(6px) scale(.98); } to { opacity: 1; transform: none; } }
 .flygon-menu { animation: flygon-menu-in 170ms cubic-bezier(.2, .8, .2, 1) both; transform-origin: 50% 100%; }
 .flygon-menu-item { transition: background-color 120ms, color 120ms; }
 .flygon-menu-item[aria-checked]::after { transition: background-color 160ms, border-color 160ms, transform 160ms; }
 .flygon-menu-item[aria-checked="true"]::after { transform: scale(1.1); }
-@media (prefers-reduced-motion: reduce) { .flygon-select select, .flygon-menu, .flygon-menu-item, .flygon-menu-item[aria-checked]::after { transition: none; animation: none; } }
+@media (prefers-reduced-motion: reduce) { .flygon-select :is(select, .flygon-select-button), .flygon-select::after, .flygon-menu, .flygon-menu-item, .flygon-menu-item[aria-checked]::after { transition: none; animation: none; } }
 
 :where([data-theme="flygon"]) .flygon-select,
 .style-flygon .flygon-select {
@@ -119,8 +129,8 @@
   --select-hover: var(--flygon-tint, #EEF7E6);
 }
 
-:where([data-theme="flygon"]) .flygon-select select:active:not(:disabled),
-.style-flygon .flygon-select select:active:not(:disabled) {
+:where([data-theme="flygon"]) .flygon-select :is(select, .flygon-select-button):active:not(:disabled),
+.style-flygon .flygon-select :is(select, .flygon-select-button):active:not(:disabled) {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0 var(--flygon-dark, #324B34);
 }
@@ -154,6 +164,11 @@
   border-radius: 0;
 }
 
+:where([data-theme="flygon"]) .flygon-menu-item[aria-selected="true"]::after,
+.style-flygon .flygon-menu-item[aria-selected="true"]::after {
+  border-radius: 0;
+}
+
 :where([data-theme="flygon"]) .flygon-menu-item[aria-checked="true"]::after,
 .style-flygon .flygon-menu-item[aria-checked="true"]::after {
   border-color: var(--style-accent);
@@ -168,8 +183,8 @@
   --select-hover: var(--othello-blue-50, #F3F7FA);
 }
 
-:where([data-theme="othello"]) .flygon-select select,
-.style-othello .flygon-select select {
+:where([data-theme="othello"]) .flygon-select :is(select, .flygon-select-button),
+.style-othello .flygon-select :is(select, .flygon-select-button) {
   padding-left: 18px;
 }
 
@@ -201,8 +216,8 @@
   --select-hover: color-mix(in srgb, var(--style-ink) 4%, var(--style-surface));
 }
 
-:where([data-theme="system"]) .flygon-select select,
-.style-system .flygon-select select {
+:where([data-theme="system"]) .flygon-select :is(select, .flygon-select-button),
+.style-system .flygon-select :is(select, .flygon-select-button) {
   font-size: 14px;
 }
 
@@ -233,8 +248,8 @@
   --select-hover: color-mix(in srgb, var(--style-ink) 8%, var(--style-surface));
 }
 
-:where([data-theme="night"]) .flygon-select select,
-.style-night .flygon-select select {
+:where([data-theme="night"]) .flygon-select :is(select, .flygon-select-button),
+.style-night .flygon-select :is(select, .flygon-select-button) {
   font-size: 16px;
   padding-left: 16px;
 }
