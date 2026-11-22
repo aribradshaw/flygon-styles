@@ -14,7 +14,7 @@ The four Flygon themes in one place, so every app inherits them instead of copyi
 Install the tarball attached to a GitHub release. No npm login, and builds need no git access:
 
 ```sh
-npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.4/flygon-styles-1.0.4.tgz
+npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.5/flygon-styles-1.0.5.tgz
 ```
 
 ## Use
@@ -33,13 +33,32 @@ Each theme sets `--style-paper`, `--style-surface`, `--style-ink`, `--style-mute
 
 Flygon brand colors (logo and product chrome) are always on `:root`: `--flygon-green`, `--flygon-dark`, `--flygon-light`, `--flygon-tint`, `--flygon-brick`, `--flygon-brick-hover`.
 
+Shared controls, styled for each theme (load after `themes.css`, inside an element with `data-theme`):
+
+```js
+import '@flygon/styles/components.css';
+```
+
+```html
+<span class="flygon-select"><select>…</select></span>
+
+<div class="flygon-menu" role="menu">
+  <p class="flygon-menu-label">Theme</p>
+  <button class="flygon-menu-item" role="menuitemradio" aria-checked="true">Night</button>
+  <hr class="flygon-menu-separator">
+  <a class="flygon-menu-item" role="menuitem" href="/settings">Settings</a>
+</div>
+```
+
+Flygon LC draws them pixel-hard (2px dark border, offset shadow), Othello soft and round, System Boring flat and compact, Night roomy with 48px+ targets. The menu is unpositioned; place it yourself.
+
 JavaScript catalog (names, colors, principles, the eight style rules, `flygonBrand`):
 
 ```js
 import { styles, styleRules, othelloPalette, cssForStyle } from '@flygon/styles';
 ```
 
-Plain JSON for non-JS tools: `@flygon/styles/tokens.json`.
+Plain JSON for non-JS tools: `@flygon/styles/tokens.json`. `componentsCss()` returns the components stylesheet as a string.
 
 Fonts are not bundled. Load Press Start 2P, Source Sans 3 or Instrument Serif/Sans where a theme needs them.
 

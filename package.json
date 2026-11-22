@@ -1,6 +1,6 @@
 {
   "name": "@flygon/styles",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The four Flygon themes (Flygon LC, Othello, System Boring, Night) as one catalog, CSS variables and JSON tokens.",
   "type": "module",
   "license": "UNLICENSED",
@@ -12,6 +12,7 @@
     ".": "./src/index.js",
     "./catalog": "./src/catalog.js",
     "./themes.css": "./dist/themes.css",
+    "./components.css": "./dist/components.css",
     "./tokens.json": "./dist/tokens.json"
   },
   "files": [

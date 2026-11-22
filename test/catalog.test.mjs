@@ -30,3 +30,13 @@ test('text roles meet 4.5:1 on their backgrounds', () => {
     }
   }
 });
+
+test('components.css is built and gives every theme its own select and menu', async () => {
+  const { componentsCss } = await import('../src/index.js');
+  const css = componentsCss();
+  assert.equal(await readFile(new URL('../dist/components.css', import.meta.url), 'utf8'), css);
+  for (const id of styles.map(s => s.id)) {
+    assert.ok(css.includes(`:where([data-theme="${id}"]) .flygon-select`), id);
+    assert.ok(css.includes(`.style-${id} .flygon-menu`), id);
+  }
+});
