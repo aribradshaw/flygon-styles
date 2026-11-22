@@ -14,7 +14,7 @@ The four Flygon themes in one place, so every app inherits them instead of copyi
 Install the tarball attached to a GitHub release. No npm login, and builds need no git access:
 
 ```sh
-npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.7/flygon-styles-1.0.7.tgz
+npm install https://github.com/aribradshaw/flygon-styles/releases/download/v1.0.8/flygon-styles-1.0.8.tgz
 ```
 
 ## Use

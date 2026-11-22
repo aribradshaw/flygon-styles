@@ -169,6 +169,17 @@
   border-radius: 0;
 }
 
+:where([data-theme="flygon"]) .flygon-menu,
+.style-flygon .flygon-menu {
+  padding: 6px;
+}
+
+:where([data-theme="flygon"]) .flygon-menu-item,
+.style-flygon .flygon-menu-item {
+  border-radius: 0;
+  padding-inline: 10px;
+}
+
 :where([data-theme="flygon"]) .flygon-menu-item[aria-checked="true"]::after,
 .style-flygon .flygon-menu-item[aria-checked="true"]::after {
   border-color: var(--style-accent);
@@ -236,9 +247,15 @@
   --menu-item-height: 36px;
 }
 
+:where([data-theme="system"]) .flygon-menu,
+.style-system .flygon-menu {
+  padding: 6px;
+}
+
 :where([data-theme="system"]) .flygon-menu-item,
 .style-system .flygon-menu-item {
   border-radius: 2px;
+  padding-inline: 10px;
 }
 
 :where([data-theme="night"]) .flygon-select,
@@ -267,4 +284,5 @@
 .style-night .flygon-menu-item {
   font-size: 15px;
   padding-inline: 12px;
+  border-radius: 12px;
 }

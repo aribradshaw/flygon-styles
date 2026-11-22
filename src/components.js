@@ -151,6 +151,8 @@ const flavors = [
     ['.flygon-menu-label', '  font-family: var(--style-heading-font);\n  font-size: 9px;\n  font-weight: 400;\n  letter-spacing: 0;'],
     ['.flygon-menu-item[aria-checked]::after', '  border-radius: 0;'],
     ['.flygon-menu-item[aria-selected="true"]::after', '  border-radius: 0;'],
+    ['.flygon-menu', '  padding: 6px;'],
+    ['.flygon-menu-item', '  border-radius: 0;\n  padding-inline: 10px;'],
     ['.flygon-menu-item[aria-checked="true"]::after', '  border-color: var(--style-accent);\n  background: var(--style-accent);'],
   ]),
   themed('othello', [
@@ -165,13 +167,14 @@ const flavors = [
     ['.flygon-select :is(select, .flygon-select-button)', '  font-size: 14px;'],
     ['.flygon-select::after', '  border-width: 0 1.5px 1.5px 0;\n  width: 6px;\n  height: 6px;'],
     ['.flygon-menu', '  --menu-radius: 4px;\n  --menu-shadow: 0 6px 18px rgba(24, 27, 25, .10);\n  --menu-hover: color-mix(in srgb, var(--style-ink) 5%, var(--style-surface));\n  --menu-item-height: 36px;'],
-    ['.flygon-menu-item', '  border-radius: 2px;'],
+    ['.flygon-menu', '  padding: 6px;'],
+    ['.flygon-menu-item', '  border-radius: 2px;\n  padding-inline: 10px;'],
   ]),
   themed('night', [
     ['.flygon-select', '  --select-height: 52px;\n  --select-radius: 12px;\n  --select-hover: color-mix(in srgb, var(--style-ink) 8%, var(--style-surface));'],
     ['.flygon-select :is(select, .flygon-select-button)', '  font-size: 16px;\n  padding-left: 16px;'],
     ['.flygon-menu', '  --menu-radius: 16px;\n  --menu-shadow: 0 18px 44px rgba(0, 0, 0, .55);\n  --menu-hover: color-mix(in srgb, var(--style-ink) 9%, var(--style-surface));\n  --menu-item-height: 48px;\n  padding: 8px;'],
-    ['.flygon-menu-item', '  font-size: 15px;\n  padding-inline: 12px;'],
+    ['.flygon-menu-item', '  font-size: 15px;\n  padding-inline: 12px;\n  border-radius: 12px;'],
   ]),
 ];
 
